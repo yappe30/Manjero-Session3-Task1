@@ -45,13 +45,17 @@ const Display = ({ personData }) => {
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-12"></div>
+                                <div className="col-12">
+                                    <Typography sx={{ fontSize: 14 }} color="text.secondary">
+                                        About:
+                                    </Typography>
+                                    <Typography sx={{ fontSize: 14 }} color="text.secondary">
+                                        {person.about}
+                                    </Typography>
+                                </div>
                             </div>
 
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
                     </Card>
                 </div>
             </React.Fragment>
