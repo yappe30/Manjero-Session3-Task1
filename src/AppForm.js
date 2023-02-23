@@ -176,7 +176,7 @@ class AppForm extends Component {
         this.setState({
             about,
         });
-        
+
         //return formValid;
     };
 
@@ -208,44 +208,53 @@ class AppForm extends Component {
                     <h2>PERSONAL DETAILS</h2>
                     <div className="row">
                         <div className="col-lg-4">
-                            <TextField
-                                required
-                                id="name"
-                                label="Name"
-                                placeholder="Please Enter Name"
-                                sx={{ width: '100%' }}
-                                onChange={this.handleChange}
-                                helperText={this.state.error.nameError}
-                                error={this.state.nameErrorField}
-                            />
-                        </div>
-                        <div className="col-lg-4">
-                            <Stack noValidate spacing={3}>
+                            <label className="form-label"></label>
+                            <div className="form-group">
                                 <TextField
-                                    id="birthDate"
-                                    label="Birthdate"
-                                    type="date"
+                                    required
+                                    id="name"
+                                    label="Name"
+                                    placeholder="Please Enter Name"
                                     sx={{ width: '100%' }}
-                                    InputLabelProps={{
-                                        shrink: true,
-                                    }}
-                                    helperText={this.state.error.birthDateError}
-                                    error={this.state.birthDateErrorField}
                                     onChange={this.handleChange}
+                                    helperText={this.state.error.nameError}
+                                    error={this.state.nameErrorField}
                                 />
-                            </Stack>
+                            </div>
                         </div>
                         <div className="col-lg-4">
-                            <TextField
-                                required
-                                id="contact"
-                                label="Contact Number"
-                                placeholder="Please Enter Name"
-                                sx={{ width: '100%' }}
-                                onChange={this.handleChange}
-                                helperText={this.state.error.contactError}
-                                error={this.state.contactErrorField}
-                            />
+                            <label className="form-label"></label>
+                            <div className="form-group">
+                                <Stack spacing={3}>
+                                    <TextField
+                                        id="birthDate"
+                                        label="Birthdate"
+                                        type="date"
+                                        sx={{ width: '100%' }}
+                                        InputLabelProps={{
+                                            shrink: true,
+                                        }}
+                                        helperText={this.state.error.birthDateError}
+                                        error={this.state.birthDateErrorField}
+                                        onChange={this.handleChange}
+                                    />
+                                </Stack>
+                            </div>
+                        </div>
+                        <div className="col-lg-4">
+                            <label className="form-label"></label>
+                            <div className="form-group">
+                                <TextField
+                                    required
+                                    id="contact"
+                                    label="Contact Number"
+                                    placeholder="Please Enter Name"
+                                    sx={{ width: '100%' }}
+                                    onChange={this.handleChange}
+                                    helperText={this.state.error.contactError}
+                                    error={this.state.contactErrorField}
+                                />
+                            </div>
                         </div>
                     </div>
                     <br></br>
